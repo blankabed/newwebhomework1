@@ -1,0 +1,49 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap css -->
+    <link href="../static/css/about.css" rel="stylesheet" type="text/css" media="all" /><!-- about css -->
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="../static/css/font-awesome.css" rel="stylesheet"> <!-- fontawesome css -->
+<!--fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <title>不喜欢的电影</title>
+</head>
+<body>
+<div class="innerpages_banner">
+		<h2>我不喜欢的电影</h2>
+</div>
+<div class="about_section">
+    {% for movieinfo in movielist  %}
+        {% ifequal movieinfo.likemoviename '0'%}
+	<div class="container">
+		<div class="col-md-6 about-left">
+			<div class="col-md-6 cakeimg">
+				<img src={{ movieinfo.movieimg}}  />
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="col-md-6 about_right">
+			<h3>{{ movieinfo.moviename }}</h3>
+			<h3 class="bold">{{ movieinfo.actoranddirector }}</h3>
+			<p>{{ movieinfo.type }} 评分：{{ movieinfo.grade }}</p>
+			<a  class="hvr-bounce-to-right read scroll"><span class="fa fa-birthday-cake" aria-hidden="true"></span>Read More</a>
+            <a  href="{{ movieinfo.movieurl }}">请点击这里</a>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+        {% endifequal %}
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #494A5F;
+            font-weight: 700;
+            font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+        }
+
+        #container {
+            width: 1000px;
+            height: 820px;
+            margin: 0 auto;
+        }
+        div.search {padding: 30px 0;}
+
+        form {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input, button {
+            border: none;
+            outline: none;
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+            padding-left: 13px;
+        }
+
+        button {
+            height: 42px;
+            width: 42px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        /*搜索框1*/
+        .bar1 {background: #A3D0C3;}
+        .bar1 input {
+            border: 2px solid #7BA7AB;
+            border-radius: 5px;
+            background: #F9F0DA;
+            color: #9E9C9C;
+        }
+        .bar1 button {
+            top: 0;
+            right: 0;
+            background: #7BA7AB;
+            border-radius: 0 5px 5px 0;
+        }
+        .bar1 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap css -->
+    <link href="../static/css/services.css" rel="stylesheet" type="text/css" media="all" /><!-- services css -->
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="../static/css/font-awesome.css" rel="stylesheet"><!-- fontawesome css -->
+<!--fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+	<div class="container">
+		<div class="search bar1">
+        <form action="/jianshaodianying/" method="post">
+            {% csrf_token %}
+            <input  name="movie"type="text" placeholder="请输入您要删除的电影">
+            <button type="submit"></button>
+        </form>
+    </div>
+	</div>
+
+<div class="footer">
+		<div class="container">
+			<div class="w3_agile_footer_grids">
+				<ul class="col-md-3 col-xs-6 w3_agile_footer_grid right">
+					<h3>Opening Hours</h3>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Monday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Tuesday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Wednesday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Thursday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Friday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Saturday <span>9:00 - 14:00</span></li>
+					<li><span class="fa fa-clock-o" aria-hidden="true"></span>Sunday <span>Closed</span></li>
+				</ul>
+				<div class="col-md-3 col-xs-6 w3_agile_footer_grid">
+					<h3>Navigation</h3>
+					<ul class="agileits_w3layouts_footer_grid_list">
+						<li>
+							<span class="fa fa-angle-double-right" aria-hidden="true"></span>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<span class="fa fa-angle-double-right" aria-hidden="true"></span>
+							<a href="about.html">About Us</a>
+						</li>
+						<li>
+							<span class="fa fa-angle-double-right" aria-hidden="true"></span>
+							<a href="services.html">Services</a>
+						</li>
+						<li>
+							<span class="fa fa-angle-double-right" aria-hidden="true"></span>
+							<a href="gallery.html">Gallery</a>
+						</li>
+						<li>
+							<span class="fa fa-angle-double-right" aria-hidden="true"></span>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-6 w3ls_address_mail_footer_grids w3_agile_footer_grid">
+					<h3>Contact Us</h3>
+					<div class="w3ls_footer_grid_left">
+						<div class="w3l-icon">
+							<span class="fa fa-map-marker" aria-hidden="true"></span>
+						</div>
+						<p>2055 PR Cross Road,
+							<span>Kennebec SD, USA.</span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="w3ls_footer_grid_left">
+						<div class="w3l-icon">
+							<span class="fa fa-phone" aria-hidden="true"></span>
+						</div>
+						<p>+(112) 455 312 671
+							<span>+(029) 664  951 859</span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="w3ls_footer_grid_left">
+						<div class="w3l-icon">
+							<span class="fa fa-envelope-o" aria-hidden="true"></span>
+						</div>
+						<p>
+							<a href="mailto:info@example.com">mail@example1.com</a>
+							<span>
+								<a href="mailto:info@example.com">mail@example2.com</a>
+							</span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-6 w3_agile_footer_grid">
+					<h3>Instagram Posts</h3>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post1.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post2.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post3.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post4.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post5.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="w3_agileits_footer_grid_left">
+						<a href="#">
+							<img src="../static/images/post6.jpg" alt=" " class="img-responsive" />
+						</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileinfo_copyright">
+				<p>Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">电影管理系统</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">电影</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
